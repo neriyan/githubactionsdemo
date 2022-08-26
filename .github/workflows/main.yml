@@ -52,5 +52,5 @@ jobs:
           docker
           docker images -a
 
-      -name: docker build
+      - name: docker build
        run: docker build . -t demo-kotlingradle2.0
