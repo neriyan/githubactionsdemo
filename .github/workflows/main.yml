@@ -54,11 +54,11 @@ jobs:
 
       - name: docker build
         run: |
-          docker build . -t demo-kotlingradle2.0
+          docker build . -t neriyan/demo-kotlingradle2.0
           docker images -a
 
       - name: dockerhub login
         run: docker login -u ${{secrets.dockerhubusername}} -p ${{secrets.dockerhubpassword}}
 
       - name: docker image push
-        run: docker push demo-kotlingradle2.0
+        run: docker push neriyan/demo-kotlingradle2.0
