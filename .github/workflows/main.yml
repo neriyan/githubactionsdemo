@@ -44,6 +44,9 @@ jobs:
           cluster-name: githubactionaks
           resource-group: githubRGAction
 
+      - name: create kubernetes namespace
+        run: kubectl create namespace githubrg
+
       - name: Run AZ Command
         run: |
           az account show
