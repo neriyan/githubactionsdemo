@@ -47,6 +47,10 @@ jobs:
       - name: create kubernetes namespace
         run: kubectl create namespace githubrg
 
+      - name: create pods
+        run: |
+          kubectl apply -f pod.yaml
+
       - name: Run AZ Command
         run: |
           az account show
