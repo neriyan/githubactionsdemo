@@ -15,6 +15,11 @@ jobs:
     name: Terraform
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        shell: bash
+        working-directory: terraform
+
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -32,3 +37,6 @@ jobs:
           wget https://github.com/terraform-linters/tflint/releases/download/v0.25.0/tflint_linux_amd64.zip
           unzip tflint_linux_amd64.zip
           mv tflint /usr/local/bin
+
+      - name: terraform init
+        run: terraform init
