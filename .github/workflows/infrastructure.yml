@@ -42,4 +42,4 @@ jobs:
         run: terraform init
 
       - name: terraform plan
-          run: terraform plan
+        run: terraform plan
