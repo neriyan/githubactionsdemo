@@ -21,7 +21,7 @@ jobs:
 
       - name: install pre-reqs
         run: |
-          curl -SL "https://releases.hashicorp.com/terraform/1.0.8/terraform_1.0.8_linux_amd64.zip" --output terraform.zip
+          curl -SL "https://releases.hashicorp.com/terraform/1.2.8/terraform_1.2.8_linux_amd64.zip" --output terraform.zip
           unzip terraform.zip
           mv terraform /usr/local/bin
           terraform --version
