@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-kotlinapp
+  labels:
+    role: webapp
+spec:
+  containers:
+    - name: web
+      image: neriyan/demo-kotlingradle
+      ports:
+        - containerPort: 80
+          name: web
+          protocol: TCP
