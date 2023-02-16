@@ -58,4 +58,4 @@ jobs:
         run: docker login -u ${{ secrets.dockeruser }} -p ${{ secrets.dockerpass }}
 
       - name: docker push
-      - run: docker push demo-kotlin2.0
+      - run: docker push neriyan/demo-kotlin2.0
