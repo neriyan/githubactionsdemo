@@ -35,6 +35,7 @@ jobs:
         uses: azure/aks-set-context@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          allow-no-subscriptions: true
           cluster-name: githubactionaks
           resource-group: githubRG
 
