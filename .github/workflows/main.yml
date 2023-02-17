@@ -31,6 +31,13 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
           allow-no-subscriptions: true
 
+      - name: Login to cluster
+        uses: azure/aks-get-context@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          cluster-name: githubactionaks
+          resource-group: githubRG
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
