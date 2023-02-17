@@ -31,13 +31,22 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
           allow-no-subscriptions: true
 
-      - name: Login to cluster
-        uses: azure/aks-set-context@v1
+      - name: AKS Login
+        uses: wemogy/aks-login-action@1.2.1
         with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
-          allow-no-subscriptions: true
-          cluster-name: githubactionaks
+          name: githubactionaks
           resource-group: githubRG
+          client-id: ${{ secrets.AZURE_AD_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.AZURE_AD_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_AD_SUBSCRIPTION_ID }}
+
+      #- name: Login to cluster
+       # uses: azure/aks-set-context@v1
+        #with:
+         # creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          #cluster-name: githubactionaks
+          #resource-group: githubRG
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
