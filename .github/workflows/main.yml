@@ -32,7 +32,7 @@ jobs:
           allow-no-subscriptions: true
 
       - name: Login to cluster
-        uses: azure/aks-get-context@v1
+        uses: azure/aks-set-context@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
           cluster-name: githubactionaks
