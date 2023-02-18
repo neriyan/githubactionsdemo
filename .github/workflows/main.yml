@@ -29,7 +29,6 @@ jobs:
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-          allow-no-subscriptions: true
 
       - name: Get subscription
         run: az account show
