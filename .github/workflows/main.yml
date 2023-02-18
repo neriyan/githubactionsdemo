@@ -41,6 +41,9 @@ jobs:
           cluster-name: githubactionaks
           resource-group: githubRG
 
+      - name: Create namespace
+        run: kubectl create namespace githubrg
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
