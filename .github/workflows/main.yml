@@ -31,8 +31,8 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
           allow-no-subscriptions: true
 
-      - name: Set az subscription
-        run: az account set --subscription ${{ secrets.AZURE_AD_SUBSCRIPTION_ID }}
+      - name: Get subscription
+        run: az account show --query id --output tsv
 
 
       - name: AKS Login
