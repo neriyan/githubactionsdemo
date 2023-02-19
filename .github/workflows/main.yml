@@ -41,8 +41,8 @@ jobs:
           cluster-name: githubactionaks
           resource-group: githubRG
 
-      - name: Create namespace
-        run: kubectl create namespace githubrg
+      #- name: Create namespace
+       # run: kubectl create namespace githubrg
 
       - name: Deploy to cluster
         run: kubectl apply -f pod.yaml
