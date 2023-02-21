@@ -42,6 +42,9 @@ jobs:
         run: terraform plan -no-color
         #continue-on-error: true
 
+      - name: Terraform apply
+        run: terraform apply
+
 
 #    steps:
 #      - name: checkout
